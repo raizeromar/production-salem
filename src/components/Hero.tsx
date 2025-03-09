@@ -98,10 +98,11 @@ const Hero = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="btn btn-secondary"
-            href='#video'
+            href='https://docs.google.com/document/d/1Ax-MDzyt1s8jTdq-tkP-wihixb0ZKZIK6XW7lLe4WMQ/edit?usp=sharing'
+            target='_blank'
           >
             <PlayCircleIcon className="w-5 h-5 ml-2" />
-            شاهد العرض التوضيحي
+            كل ما تريد معرفته عن سالم
           </motion.a>
         </motion.div>
       </div>
