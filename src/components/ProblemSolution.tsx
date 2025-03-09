@@ -38,18 +38,18 @@ const ProblemSolution = () => {
               className="space-y-4"
             >
               <div className="p-4 bg-white/10 backdrop-blur rounded-lg">
-                <h3 className="mb-2 text-xl font-semibold text-salem-red">+4 مليون</h3>
-                <p className="text-white/90">أخطاء طبية يمكن تجنبها سنويًا</p>
+                <h3 className="mb-2 text-xl font-semibold text-salem-red">غياب السجلات الصحية الرقمية</h3>
+                <p className="text-white/90">الاعتماد على السجلات الورقية يؤدي إلى فقدان المعلومات وضعف كفاءة الرعاية الصحية.</p>
               </div>
               
               <div className="p-4 bg-white/10 backdrop-blur rounded-lg">
-                <h3 className="mb-2 text-xl font-semibold text-salem-red">+98 ألف</h3>
-                <p className="text-white/90">وفيات بسبب الأخطاء الطبية سنويًا</p>
+                <h3 className="mb-2 text-xl font-semibold text-salem-red">35-50% من الأخطاء الطبية سببها فقدان السجلات الصحية</h3>
+                <p className="text-white/90">عدم توفر بيانات موثوقة يزيد من مخاطر التشخيص الخاطئ والأدوية غير المناسبة.</p>
               </div>
               
               <div className="p-4 bg-white/10 backdrop-blur rounded-lg">
-                <h3 className="mb-2 text-xl font-semibold text-salem-red">+20 مليار دولار</h3>
-                <p className="text-white/90">التكلفة السنوية لنظام الرعاية الصحية</p>
+                <h3 className="mb-2 text-xl font-semibold text-salem-red">عدم وجود نظام ذكي لتحليل البيانات الصحية</h3>
+                <p className="text-white/90">غياب التحليلات الرقمية يمنع التنبؤ بالأوبئة وتحسين إدارة الرعاية الصحية.</p>
               </div>
             </motion.div>
           </div>
@@ -104,8 +104,8 @@ const ProblemSolution = () => {
                   whileHover={{ scale: 1.02 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <h3 className="mb-2 text-xl font-semibold text-salem-indigo">التحقق المدعوم بالذكاء الاصطناعي</h3>
-                  <p className="text-gray-600">فحوصات تفاعل الأدوية في الوقت الفعلي والتحقق من هوية المريض</p>
+                  <h3 className="mb-2 text-xl font-semibold text-salem-indigo">السجلات الصحية الرقمية الموحدة</h3>
+                  <p className="text-gray-600">منصة Salem توفر ملفًا صحيًا رقميًا لكل مريض، مما يضمن وصولًا سريعًا وآمنًا للبيانات الطبية.</p>
                 </motion.div>
 
                 <motion.div
@@ -113,8 +113,8 @@ const ProblemSolution = () => {
                   whileHover={{ scale: 1.02 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <h3 className="mb-2 text-xl font-semibold text-salem-indigo">تقنية NFC</h3>
-                  <p className="text-gray-600">وصول فوري إلى بيانات المريض الحرجة بنقرة بسيطة</p>
+                  <h3 className="mb-2 text-xl font-semibold text-salem-indigo">بطاقات NFC للمرضى</h3>
+                  <p className="text-gray-600">إمكانية الوصول السريع للسجلات الطبية عبر بطاقة ذكية.</p>
                 </motion.div>
 
                 <motion.div
@@ -122,8 +122,8 @@ const ProblemSolution = () => {
                   whileHover={{ scale: 1.02 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <h3 className="mb-2 text-xl font-semibold text-salem-indigo">تنبيهات ذكية</h3>
-                  <p className="text-gray-600">إشعارات استباقية للتعارضات الطبية المحتملة</p>
+                  <h3 className="mb-2 text-xl font-semibold text-salem-indigo">التحليلات المتقدمة والتنبؤ الصحي</h3>
+                  <p className="text-gray-600">يستخدم Salem البيانات الصحية مع الذكاء الصنعي لتوقع الأوبئة وتحسين استراتيجيات الرعاية الصحية.</p>
                 </motion.div>
               </div>
             </div>
