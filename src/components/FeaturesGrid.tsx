@@ -8,26 +8,26 @@ import {
 
 const features = [
   {
-    title: 'تنبيهات الأدوية',
-    description: 'مراقبة الذكاء الاصطناعي في الوقت الفعلي للتفاعلات الدوائية المحتملة والحساسية',
+    title: 'مساعد طبي ذكي',
+    description: 'مساعد ذكي يساعد الأطباء والصيادلة في التحقق السريع من التفاعلات الدوائية المحتملة، مما يوفّر الوقت ويقلل بعض الأخطاء المحتملة.',
     icon: BoltIcon,
     bgClass: 'bg-gradient-to-br from-red-500/20 to-orange-500/20'
   },
   {
-    title: 'الوصفات الإلكترونية',
-    description: 'وصفات طبية رقمية آمنة مع التحقق التلقائي',
+    title: 'سجلات صحية رقمية',
+    description: 'ملف طبي موحّد لكل مريض، يشمل الوصفات الإلكترونية وتقارير الفحوصات، لضمان دقة البيانات وسهولة الوصول إليها.',
     icon: DocumentTextIcon,
     bgClass: 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20'
   },
   {
-    title: 'مركز التواصل',
-    description: 'تواصل مع مقدمي الرعاية الصحية في الوقت الفعلي',
+    title: 'بطاقات NFC للمرضى',
+    description: 'تتيح للأطباء والمستشفيات الوصول الفوري إلى السجلات الطبية بلمسة واحدة، مما يقلل من فقدان المعلومات.',
     icon: ChatBubbleBottomCenterTextIcon,
     bgClass: 'bg-gradient-to-br from-green-500/20 to-emerald-500/20'
   },
   {
-    title: 'اكتشاف تفشي الأمراض',
-    description: 'نظام إنذار مبكر مدعوم بالذكاء الاصطناعي لتفشي الأمراض',
+    title: 'تحليلات ذكية للقطاع الصحي',
+    description: 'توفير بيانات دقيقة لصنّاع القرار عبر تحليل الأنماط الصحية، مما يساعد في تحسين السياسات الطبية.',
     icon: GlobeAltIcon,
     bgClass: 'bg-gradient-to-br from-purple-500/20 to-indigo-500/20'
   }
@@ -38,9 +38,9 @@ const FeaturesGrid = memo(() => {
     <section className="py-24 bg-white" dir="rtl">
       <div className="container">
         <div className="text-center mb-16 animate-fadeIn">
-          <h2 className="mb-4 text-4xl font-bold text-gray-900">ميزات مدعومة بالذكاء الاصطناعي</h2>
+          <h2 className="mb-4 text-4xl font-bold text-gray-900">ميزات سالم الرقمية</h2>
           <p className="max-w-2xl mx-auto text-lg text-gray-600">
-            تقنية متطورة تعمل معًا لمنع الأخطاء الطبية
+            تقنيات متطورة تعمل معًا لتطوير الرعاية الصحية والمساعدة في تحسينها
           </p>
         </div>
 
