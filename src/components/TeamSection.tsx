@@ -55,9 +55,9 @@ const teamMembers = [
     id: 4,
     name: 'Omar',
     role: 'Pharmacist, PO',
-    bio: 'صيدلاني محترف مع خبرة في إدارة المنتجات الطبية وتطوير استراتيجيات الرعاية الصحية',
+    bio: 'طالب في كلية الصيدلة، AI & Backend Developer, دمج الذكاء الصنعي و التكنولوجيا بتطبيقات الرعاية الصحية هو شغفي',
     expertise: ['Pharmacy', 'Product Management', 'Healthcare Strategy'],
-    category: ['medical', 'business'],
+    category: ['medical', 'business', 'technical'],
     image: OmarImg
   },
   {
