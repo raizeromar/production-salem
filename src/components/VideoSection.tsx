@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 const VideoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const youtubeVideoId = 'YO1XWwB0HAA';
 
   return (
     <section id='video' className="relative py-24 bg-gradient-to-b from-salem-indigo/5 to-transparent overflow-hidden" dir="rtl">
@@ -18,12 +19,11 @@ const VideoSection = () => {
             {!isPlaying ? (
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="absolute inset-0">
-                  <video
+                  <img 
                     className="w-full h-full object-cover"
-                    poster="/video-thumbnail.jpg"
-                  >
-                    <source src="/salem-demo.mp4" type="video/mp4" />
-                  </video>
+                    src={`https://img.youtube.com/vi/${youtubeVideoId}/maxresdefault.jpg`}
+                    alt="Video thumbnail"
+                  />
                   <div className="absolute inset-0 bg-gray-900/40" />
                 </div>
                 <motion.button
@@ -36,15 +36,16 @@ const VideoSection = () => {
                 </motion.button>
               </div>
             ) : (
-              <video
+              <iframe
                 className="w-full h-full"
-                autoPlay
-                controls
-                src="/ved.mp4"
-              />
+                src={`https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1&rel=0`}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             )}
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -65,4 +66,4 @@ const VideoSection = () => {
   );
 };
 
-export default VideoSection; 
+export default VideoSection;
