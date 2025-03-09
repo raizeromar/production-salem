@@ -12,6 +12,8 @@ import {
   InstagramIcon,
 } from './Icons';
 
+import './footer.css'
+
 const footerLinks = [
   {
     title: 'المنتج',
@@ -52,9 +54,27 @@ const footerLinks = [
 
 const Footer = () => {
   const [email, setEmail] = useState('');
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupContent, setPopupContent] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Show the loader in the popup
+    setPopupContent(`
+      <div class="banter-loader">
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+      </div>
+    `);
+    setShowPopup(true);
 
     try {
       const url = `https://script.google.com/macros/s/AKfycbxkmRA0q9RMT-VVVNSwOEXjII-6B0Iy4uLW38ezr_tS_-eKO3VlREV_36a-elEqkW7HOg/exec?email=${encodeURIComponent(email)}`;
@@ -63,14 +83,38 @@ const Footer = () => {
       });
 
       if (response.ok) {
-        alert('شكرًا على الاشتراك!');
-        setEmail('');
+        // Show success message
+        setPopupContent(`
+          <div class="success-message">
+            <p>شكرًا على الاشتراك!<br>سنبقيك على اطلاع...</p>
+          </div>
+        `);
+        setTimeout(() => {
+          setShowPopup(false);
+          setEmail('');
+        }, 3000); // Close the popup after 3 seconds
       } else {
-        alert('حدث خطأ. يرجى المحاولة مرة أخرى.');
+        // Show error message
+        setPopupContent(`
+          <div class="error-message">
+            <p>حدث خطأ.<br>يرجى المحاولة مرة أخرى.</p>
+          </div>
+        `);
+        setTimeout(() => {
+          setShowPopup(false);
+        }, 3000); // Close the popup after 3 seconds
       }
     } catch (error) {
       console.error('Error:', error);
-      alert('حدث خطأ. يرجى المحاولة مرة أخرى.');
+      // Show error message
+      setPopupContent(`
+        <div class="error-message">
+          <p>فشل إرسال النموذج.<br>يرجى المحاولة مرة أخرى.</p>
+        </div>
+      `);
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 3000); // Close the popup after 3 seconds
     }
   };
 
@@ -202,6 +246,19 @@ const Footer = () => {
           </p>
         </div>
       </div>
+
+      {/* Popup */}
+      {showPopup && (
+        <div className="popup">
+          <div className="card">
+            <div className="card-content">
+              <div className="card-top"></div>
+              <div className="card-bottom"></div>
+            </div>
+            <div className="card-image" dangerouslySetInnerHTML={{ __html: popupContent }}></div>
+          </div>
+        </div>
+      )}
     </footer>
   );
 };
