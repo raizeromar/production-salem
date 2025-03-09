@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import {
   EnvelopeIcon,
   MapPinIcon,
@@ -50,6 +51,29 @@ const footerLinks = [
 ];
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const url = `https://script.google.com/macros/s/AKfycbxkmRA0q9RMT-VVVNSwOEXjII-6B0Iy4uLW38ezr_tS_-eKO3VlREV_36a-elEqkW7HOg/exec?email=${encodeURIComponent(email)}`;
+      const response = await fetch(url, {
+        method: 'GET',
+      });
+
+      if (response.ok) {
+        alert('شكرًا على الاشتراك!');
+        setEmail('');
+      } else {
+        alert('حدث خطأ. يرجى المحاولة مرة أخرى.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('حدث خطأ. يرجى المحاولة مرة أخرى.');
+    }
+  };
+
   return (
     <footer className="bg-gray-900 text-white" dir="rtl">
       <div className="container py-16">
@@ -140,7 +164,7 @@ const Footer = () => {
 
         {/* Newsletter */}
         <div className="mt-12 pt-8 border-t border-gray-800">
-          <form className="sm:flex sm:max-w-md">
+          <form className="sm:flex sm:max-w-md" onSubmit={handleSubmit}>
             <label htmlFor="email-address" className="sr-only">
               عنوان البريد الإلكتروني
             </label>
@@ -152,6 +176,8 @@ const Footer = () => {
               required
               className="w-full min-w-0 px-4 py-2 text-base text-gray-900 placeholder-gray-500 bg-white border border-transparent rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-salem-teal focus:border-transparent"
               placeholder="أدخل بريدك الإلكتروني"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <div className="mt-3 sm:mt-0 sm:mr-3">
               <motion.button
@@ -180,4 +206,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;
