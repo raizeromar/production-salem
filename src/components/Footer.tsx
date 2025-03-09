@@ -86,15 +86,22 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 space-x-reverse">
                 <EnvelopeIcon className="w-5 h-5 text-salem-teal" />
-                <span className="text-gray-400">salemhealth@gmail.com</span>
+                <span className="text-gray-400">salem@gatara.org</span>
               </div>
             </div>
 
             <div className="flex space-x-4 space-x-reverse">
-              {[FacebookIcon, TwitterIcon, LinkedInIcon, InstagramIcon].map((Icon, index) => (
+              {[
+                { Icon: FacebookIcon, href: "https://www.facebook.com/share/1A9HUspytw/" },
+                { Icon: TwitterIcon, href: "#" }, // Add your Twitter link here
+                { Icon: LinkedInIcon, href: "https://www.linkedin.com/company/salem-%D8%B3%D8%A7%D9%84%D9%85" },
+                { Icon: InstagramIcon, href: "https://www.instagram.com/salem.health" },
+              ].map(({ Icon, href }, index) => (
                 <motion.a
                   key={index}
-                  href="#"
+                  href={href}
+                  target="_blank" // Opens the link in a new tab
+                  rel="noopener noreferrer" // Recommended for security with target="_blank"
                   className="p-2 rounded-full bg-gray-800 hover:bg-salem-teal/20"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
