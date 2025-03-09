@@ -2,16 +2,16 @@ import { memo, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Import images from assets
-import qamarImg from '../assets/team-pics/qamar-min.jpeg';
-import muhammadBImg from '../assets/team-pics/muhammad bayazid-min.jpg';
-import tasneemImg from '../assets/team-pics/tasneem-min.jpeg';
-import muhammadFImg from '../assets/team-pics/muhammad flutter-min.jpg';
-import obadaImg from '../assets/team-pics/obada-min.jpg';
-import tawfiqImg from '../assets/team-pics/tawfik-min.jpg';
-import bilalImg from '../assets/team-pics/bilal-min.jpg';
-import joudyImg from '../assets/team-pics/joudy-min.jpeg';
-import olaImg from '../assets/team-pics/ola-min.jpg';
-import OmarImg from '../assets/team-pics/Omar Gatara-min.jpg'
+import qamarImg from '/src/assets/team-pics/qamar-min.webp';
+import muhammadBImg from '/src/assets/team-pics/muhammad-bayazid-min.webp';
+import tasneemImg from '/src/assets/team-pics/tasneem-min.webp';
+import muhammadFImg from '/src/assets/team-pics/muhammad-flutter-min.webp';
+import obadaImg from '/src/assets/team-pics/obada-min.webp';
+import tawfiqImg from '/src/assets/team-pics/tawfik-min.webp';
+import bilalImg from '/src/assets/team-pics/bilal-min.webp';
+import joudyImg from '/src/assets/team-pics/joudy-min.webp';
+import olaImg from '/src/assets/team-pics/ola-min.webp';
+import OmarImg from '/src/assets/team-pics/Omar-Gatara-min.webp'
 
 // Define team member categories
 const categories = [
@@ -54,10 +54,10 @@ const teamMembers = [
   {
     id: 4,
     name: 'Omar',
-    role: 'Pharmacist, PO',
+    role: 'Product Owner, Ph',
     bio: 'طالب في كلية الصيدلة، AI & Backend Developer, دمج الذكاء الصنعي و التكنولوجيا بتطبيقات الرعاية الصحية هو شغفي',
     expertise: ['Pharmacy', 'Product Management', 'Healthcare Strategy'],
-    category: ['medical', 'business', 'technical'],
+    category: ['medical', 'business'],
     image: OmarImg
   },
   {
