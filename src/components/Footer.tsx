@@ -150,7 +150,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 space-x-reverse">
                 <PhoneIcon className="w-5 h-5 text-salem-teal" />
-                <span dir='ltr' className="text-gray-400">+963 958962011</span>
+                <span dir='ltr' className="text-gray-400">+963 939676801</span>
               </div>
               <div className="flex items-center space-x-3 space-x-reverse">
                 <EnvelopeIcon className="w-5 h-5 text-salem-teal" />
