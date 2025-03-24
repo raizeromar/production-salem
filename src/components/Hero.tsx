@@ -104,6 +104,17 @@ const Hero = () => {
             <PlayCircleIcon className="w-5 h-5 ml-2" />
             كل ما تريد معرفته عن سالم
           </motion.a>
+
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="btn btn-thirdary"
+            href='https://forms.gle/PTNyecnqg2tZhM1B6'
+            target='_blank'
+          >
+            <PlayCircleIcon className="w-5 h-5 ml-2" />
+                 استبيان سريع ومهم للأطباء
+          </motion.a>
         </motion.div>
       </div>
       <div className='w-[200%] h-[100px] bg-salem-teal absolute left-1/2 -translate-x-1/2 -bottom-12 opacity blur-lg'>

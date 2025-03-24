@@ -132,6 +132,11 @@
     @apply text-salem-indigo bg-white border-2 border-salem-indigo hover:bg-salem-indigo hover:text-white focus:ring-salem-indigo;
   }
 
+  .btn-thirdary {
+    @apply text-white bg-salem-teal border-2 border-salem-indigo hover:bg-white hover:text-salem-indigo focus:ring-salem-indigo;
+  }
+
+
   .nav-link {
     @apply px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-salem-indigo;
   }
